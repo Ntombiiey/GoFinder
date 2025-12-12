@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+</head>
+<body>
+    <h1>Search for Places</h1>
+    <form id="searchForm">
+        <input type="text" id="searchInput" name="query" placeholder="Find your fun..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    <script>
+        // Function to get query parameters from the URL
+function getQueryParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// Get the search query from the URL
+const searchQuery = getQueryParameter('query');
+
+// Display the search query in the results section
+const resultsDiv = document.getElementById('results');
+if (searchQuery) {
+    resultsDiv.innerHTML = `<p>You searched for: <strong>${searchQuery}</strong></p>`;
+} else {
+    resultsDiv.innerHTML = '<p>No search query provided.</p>';
+}
+    </script>
+</body>
+</html>

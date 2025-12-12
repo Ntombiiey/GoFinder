@@ -1,0 +1,615 @@
+<style>
+    .list-container{
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+  }
+  .left-col{
+    flex-basis: 70%;
+  }
+  .right-col{
+    flex-basis:25%
+  }
+  .left-col h1{
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .cafe{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+  }
+  .cafe-img{
+    flex-basis:40%;
+  }
+  .cafe-info{
+    flex-basis:58% ;
+    color:#555;
+  }
+  .cafe-img img{
+    width: 100%;
+    border-radius: 12px;
+  }
+  .cafe-info h3{
+    font-weight: 600;
+    color:#333;
+    font-size:22px;
+    margin: 4px 0 ;
+  }
+  .rating-box {
+    margin-top: 10px;
+}
+
+.rating-box header {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rating-box .stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stars i {
+    color: #e6e6e6;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars i.active {
+    color: #ff9c1a;
+}
+
+.view-reviews {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.reviews-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: scroll;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.reviews-popup .review {
+    margin-bottom: 10px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    .cafe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cafe-img {
+        height: 300px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .cafe-info {
+        text-align: center;
+    }
+}
+
+</style>
+
+<html>
+ <body>
+ 
+  <div class="left-col">
+      <h1>Cafes</h1>
+
+</div>
+<div class="list-container"></div>
+    <div class="left-col">
+        <div class="Cafe">
+            <div class="cafe-img">
+                <img src="C:\Users\Admin\OneDrive - Richfield Graduate Institute of Technology\Documents\GoFinder\GoFinder images\PlatoStellies-53_5b3aeb1b-dca1-4228-9908-a6a3ccb6a8ed.webp" hight="300" width="200">
+
+            </div>
+            <div class="cafe-info">
+               <h2><p>Plato coffee</p></h2> 
+                <p>Description: Come experience the ultimate coffee experience at Plato Coffee. Our premium coffee are expertly crafted to deliver exceptional flavours and quality. From bold and rich to smooth and creamy, we have something to satisfy every palate. Our cosy atmosphere and friendly staff create the perfect environment to relax and enjoy your favourite brew. Visit us today and taste the difference. </p>
+                <p>Price Range: R50-R100 </p>
+                <p>Address: <a href="https://www.google.com/maps/dir/?api=1&destination=258+Chris+Hougaard+St,+Wierdapark" 
+              target="_blank" class="location-link">258 Chris Hougaard St, Wierdapark</a>  </p>
+            <p> Hours: <select>
+              <option value="11am-9pm">Monday: 06:00 - 18:00 </option>
+              <option value="8am-9:30pm">Tuesday: 06:00 - 18:00</option>
+              <option value="7am-10pm">Wednesday: 06:00 - 18:00</option>
+              <option value="9:30am-10pm">Thursday: 06:00 - 18:00</option>
+              <option value="11:30am-10pm">Friday: 06:00 - 18:00</option>
+              <option value="7am-9pm">Saturday: 06:00 - 18:00</option>
+              <option value="7am-9pm">Sunday: 07:00 - 18:00</option>
+            </select>
+           </p>
+           <div class="rating-box">
+            <header>Average Rating:</header>
+            <div class="stars average-stars" id="Plato Coffee-Average-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+
+        <div class="view-reviews" onclick="handleReviewClick('sheds-market')">Click here to view or submit reviews</div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="right-col"></div>
+    <div class="list-container"></div>
+    <div class="left-col">
+        <div class="Cafe">
+            <div class="cafe-img">
+                
+<img src="C:\xampp\htdocs\gofinder\PlatoStellies-53_5b3aeb1b-dca1-4228-9908-a6a3ccb6a8ed.webp" height="300" width="200">
+            </div>
+            <div class="cafe-info">
+               <h2><p>Irene farm-The Deck</p></h2> 
+                <p>Description: Situated adjacent to and leading directly off The Deli, is a coffee shop restaurant in Centurion, The Deck. Retaining a light, bistro vibe we serve a wide range of breakfast and lunch options.Our scrumptious a la carte menus have been created with fresh and hearty homemade food in mind. These are complimented by the view over the farm (because we know how beautiful it is), the upbeat vibe and the friendly staff.  </p>
+                <p>Price Range: R150 - R200 </p>
+                <p>Address:  <a href="https://www.google.com/maps/dir/?api=1&destination=Nellmapius+Rd,+Irene" 
+              target="_blank" class="location-link">Nellmapius Rd, Irene, Centurion</a> </p>
+            <p> Hours:  <select>
+              <option value="11am-9pm">Monday: 08:00 - 17:30 </option>
+              <option value="8am-9:30pm">Tuesday: 08:00 - 17:30</option>
+              <option value="7am-10pm">Wednesday: 08:00 - 17:30</option>
+              <option value="9:30am-10pm">Thursday: 08:00 - 17:30</option>
+              <option value="11:30am-10pm">Friday: 08:00 - 17:30</option>
+              <option value="7am-9pm">Saturday: 08:00 - 17:30</option>
+              <option value="7am-9pm">Sunday: 08:00 - 17:30</option>
+            </select></p>
+            <div class="rating-box">
+              <header>Average Rating:</header>
+              <div class="stars average-stars" id="Irene farm-The Deck-average-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+              </div>
+          </div>
+
+          <div class="view-reviews" onclick="handleReviewClick('Irene farm-The Deck')">Click here to view or submit reviews</div>
+      </div>
+  </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-col"></div>
+
+
+</div>
+
+</div>
+<div class="right-col"></div>
+<div class="list-container"></div>
+<div class="left-col">
+<div class="Cafe">
+<div class="cafe-img">
+   <img src="C:\Users\Rabella Maluleke\Documents\GoFinder\GoFinder images\Heavenly coffees.jpg" height="300" width="200">
+
+</div>
+<div class="cafe-info">
+  <h2><p>Heavenly coffees</p></h2> 
+   <p>Description: Heavenly Coffee Trading (Pty)Ltd is an artisan coffee roaster and coffee equipment specialist. </p>
+   <p>Price Range: R50 - R100 </p>
+<p>Address:  <a href="GoFinder images/Heavenly coffees.jpg" 
+  target="_blank" class="location-link">Retail store Address 2134 Hendrik Verwoerd Drive Hennopspark, Centurion </p></a>
+<p> Hours:  <select>
+  <option value="11am-9pm">Monday: 09:00 - 17:00 </option>
+  <option value="8am-9:30pm">Tuesday: 09:00 - 17:00</option>
+  <option value="7am-10pm">Wednesday: 09:00 - 17:00</option>
+  <option value="9:30am-10pm">Thursday: 09:00 - 17:00</option>
+  <option value="11:30am-10pm">Friday: 09:00 - 17:00</option>
+  <option value="7am-9pm">Saturday: 09:00 - 13:00</option>
+  <option value="7am-9pm">Sunday: Closed</option>
+</select></p>
+<div class="rating-box">
+  <header>Average Rating:</header>
+  <div class="stars average-stars" id="Heavenly coffees-average-rating">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+  </div>
+</div>
+
+<div class="view-reviews" onclick="handleReviewClick('Heavenly coffees')">Click here to view or submit reviews</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="right-col"></div>
+</div>
+<div class="right-col"></div>
+<div class="list-container"></div>
+<div class="left-col">
+<div class="Cafe">
+<div class="cafe-img">
+   <img src="C:\Users\Admin\OneDrive - Richfield Graduate Institute of Technology\Documents\GoFinder\GoFinder images\Heavenly coffees.jpg" height="300" width="200">
+
+</div>
+<div class="cafe-info">
+  <h2><p>Seattle Coffee</p></h2> 
+   <p>Description: We strive to capture the artisanal approach towards our craft – traceability of crops, handpicked harvesting, hand roasting and manual espresso production – a ‘quality at-all-costs’ approach that cascades down from farm to the cup in your hand.   </p>
+   <p>Price Range: R50-R100 </p>
+   <p>Address:  <a href="https://www.google.com/maps/dir/?api=1&destination=94+Lyttelton+Rd,+Clubview" 
+  target="_blank" class="location-link">94 Lyttelton Rd, Clubview, Centurion, 0014</a> </p>
+<p> Hours:  <select></select>
+  <option value="11am-9pm">Monday: 09:00 - 17:00 </option>
+  <option value="8am-9:30pm">Tuesday: 09:00 - 17:00</option>
+  <option value="7am-10pm">Wednesday: 09:00 - 17:00</option>
+  <option value="9:30am-10pm">Thursday: 09:00 - 17:00</option>
+  <option value="11:30am-10pm">Friday: 09:00 - 17:00</option>
+  <option value="7am-9pm">Saturday: 09:00 - 13:00</option>
+  <option value="7am-9pm">Sunday: Closed</option>
+</select></p>
+<div class="rating-box">
+  <header>Average Rating:</header>
+  <div class="stars average-stars" id="Seattle Coffee-average-rating">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+  </div>
+</div>
+
+<div class="view-reviews" onclick="handleReviewClick('Seattle Coffee')">Click here to view or submit reviews</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="right-col"></div>
+</div>
+<div class="right-col"></div>
+<div class="list-container"></div>
+<div class="left-col">
+<div class="Cafe">
+<div class="cafe-img">
+   <img src="C:\Users\Admin\OneDrive - Richfield Graduate Institute of Technology\Documents\GoFinder\GoFinder images\Bembom.webp" height="300" width="200">
+
+</div>
+<div class="cafe-info">
+  <h2><p>Bembom</p></h2> 
+   <p>Description: Step into Bembom and be instantly transported to the cobbled streets of Lisbon. Every aroma, flavor, and melody in our café echoes the rich tapestry of Portuguese culture. From the robust aroma of our freshly brewed coffee to the delicate textures of our handcrafted pastries, every moment at Bembom is a sensory delight, waiting to be discovered.  </p>
+   <p>Price Range: R50 - R250 </p>
+   <p>Address: <a href="" 
+  target="_blank" class="location-link">Lavender Square, Cnr Braam Pretorius & Lavender RD West, Wonderboom</a>  </p>
+<p> Hours:  <select>
+  <option value="11am-9pm">Monday: 09:00 - 17:00 </option>
+  <option value="8am-9:30pm">Tuesday: 09:00 - 17:00</option>
+  <option value="7am-10pm">Wednesday: 09:00 - 17:00</option>
+  <option value="9:30am-10pm">Thursday: 09:00 - 17:00</option>
+  <option value="11:30am-10pm">Friday: 09:00 - 17:00</option>
+  <option value="7am-9pm">Saturday: 09:00 - 13:00</option>
+  <option value="7am-9pm">Sunday: Closed</option>
+</select></p>
+<div class="rating-box">
+  <header>Average Rating:</header>
+  <div class="stars average-stars" id="Bembom-average-rating">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+  </div>
+</div>
+
+<div class="view-reviews" onclick="handleReviewClick('Bembom')">Click here to view or submit reviews</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="right-col"></div>
+</div>
+<div class="right-col"></div>
+<div class="list-container"></div>
+<div class="left-col">
+<div class="Cafe">
+<div class="cafe-img">
+   <img src= "C:\Users\Admin\OneDrive - Richfield Graduate Institute of Technology\Documents\GoFinder\GoFinder images\BeeHive Cafe.jpg" height="300" width="200">
+
+</div>
+<div class="cafe-info">
+  <h2><p>BeeHive Cafe</p></h2> 
+   <p>Description:  Has all you can eat · Has outdoor seating · Serves great cocktails </p>
+   <p>Price Range: R50-R100 </p>
+<p>Address: <a href="https://www.google.com/maps/dir/?api=1&destination=919+Lea+Mangope+Rd,+Mabopane+Unit+x" 
+  target="_blank" class="location-link">919 Lea Mangope Rd, Mabopane Unit X, Mabopane, 0190</a>  </p>
+<p> Hours:  <select>
+  <option value="11am-9pm">Monday: 09:00 - 17:00 </option>
+  <option value="8am-9:30pm">Tuesday: 09:00 - 17:00</option>
+  <option value="7am-10pm">Wednesday: 09:00 - 17:00</option>
+  <option value="9:30am-10pm">Thursday: 09:00 - 17:00</option>
+  <option value="11:30am-10pm">Friday: 09:00 - 17:00</option>
+  <option value="7am-9pm">Saturday: 09:00 - 13:00</option>
+  <option value="7am-9pm">Sunday: Closed</option>
+</select></p>
+<div class="rating-box">
+  <header>Average Rating:</header>
+  <div class="stars average-stars" id="sheds-market-average-rating">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+  </div>
+</div>
+
+<div class="view-reviews" onclick="handleReviewClick('BeeHive Cafe')">Click here to view or submit reviews</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="right-col"></div>
+</div>
+
+<div class="right-col"></div>
+</div>
+<div class="right-col"></div>
+<div class="list-container"></div>
+<div class="left-col">
+<div class="Cafe">
+<div class="cafe-img">
+   <img src= "C:\Users\Admin\OneDrive - Richfield Graduate Institute of Technology\Documents\GoFinder\GoFinder images\Socery coffee.jpg" height="300" width="200">
+
+</div>
+<div class="cafe-info">
+  <h2><p>Sorcery Coffee Roasters Colbyn</p></h2> 
+   <p>Description: Please note this is a SELF SERVICE cafe with great coffee and small eats like croissants , cakes, quiches & toasties
+
+    No booking required
+    Kids welcome
+    Small pets on a leash please
+    
+    DRIVE THERE </p>
+    <p>Price Range: R100 - R150 </p>
+<p>Address:  <a href="https://www.google.com/maps/dir/?api=1&destination=196+Bernard+st,+Colbyn" 
+  target="_blank" class="location-link">196 Bernard St, Colbyn, Pretoria</a></p>
+<p> Hours:  <select>
+  <option value="11am-9pm">Monday: 09:00 - 17:00 </option>
+  <option value="8am-9:30pm">Tuesday: 09:00 - 17:00</option>
+  <option value="7am-10pm">Wednesday: 09:00 - 17:00</option>
+  <option value="9:30am-10pm">Thursday: 09:00 - 17:00</option>
+  <option value="11:30am-10pm">Friday: 09:00 - 17:00</option>
+  <option value="7am-9pm">Saturday: 09:00 - 13:00</option>
+  <option value="7am-9pm">Sunday: Closed</option>
+</select></p>
+<div class="rating-box">
+  <header>Average Rating:</header>
+  <div class="stars average-stars" id="Sorcery Coffee Roasters Colbyn-average-rating">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+  </div>
+</div>
+
+<div class="view-reviews" onclick="handleReviewClick('Sorcery Coffee Roasters Colbyn')">Click here to view or submit reviews</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="right-col"></div>
+</div>
+
+<div class="right-col"></div>
+</div>
+<div class="right-col"></div>
+<div class="list-container"></div>
+<div class="left-col">
+<div class="Cafe">
+<div class="cafe-img">
+   <img src= "C:\Users\Admin\OneDrive - Richfield Graduate Institute of Technology\Documents\GoFinder\GoFinder images\Goddess cafe.jpeg" height="300" width="200">
+
+</div>
+<div class="cafe-info">
+  <h2><p>Goddess Garden Cafe Rietondale</p></h2> 
+   <p>Description: Pink themed coffee shop </p>
+   <p>Price Range: R50-R200</p>
+<p>Address: <a href="https://www.google.com/maps/dir/?api=1&destination=217+Soutpansberg+Road,+CNR+Belrene+Street,+Rietondale" 
+  target="_blank" class="location-link">217 Soutpansberg Road, CNR Belrene Street, Rietondale</a>  </p>
+<p> Hours:  <select>
+  <option value="11am-9pm">Monday: 09:00 - 17:00 </option>
+  <option value="8am-9:30pm">Tuesday: 09:00 - 17:00</option>
+  <option value="7am-10pm">Wednesday: 09:00 - 17:00</option>
+  <option value="9:30am-10pm">Thursday: 09:00 - 17:00</option>
+  <option value="11:30am-10pm">Friday: 09:00 - 17:00</option>
+  <option value="7am-9pm">Saturday: 09:00 - 13:00</option>
+  <option value="7am-9pm">Sunday: Closed</option>
+</select></p>
+<div class="rating-box">
+  <header>Average Rating:</header>
+  <div class="stars average-stars" id="Goddess Garden Cafe Rietondale-average-rating">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+  </div>
+</div>
+
+<div class="view-reviews" onclick="handleReviewClick('Goddess Garden Cafe Rietondale')">Click here to view or submit reviews</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="right-col"></div>
+</div>
+
+<div class="right-col"></div>
+</div>
+<div class="right-col"></div>
+<div class="list-container"></div>
+<div class="left-col">
+<div class="Cafe">
+<div class="cafe-img">
+  <img src= "C:\Users\Admin\OneDrive - Richfield Graduate Institute of Technology\Documents\GoFinder\GoFinder images\mugg and bean.jpg" height="300" width="200">
+
+</div>
+<div class="cafe-info">
+  <h2><p>Mugg & Bean</p></h2> 
+   <p>Description:  Modern chain cafe serving hearty classics, gourmet burgers and sandwiches, coffee and giant muffins. </p>
+   <p>Price Range: R50 - R250 </p>
+<p>Address: <a href="https://www.google.com/maps/dir/?api=1&destination=258+Chris+Hougaard+St,+Wierdapark" 
+  target="_blank" class="location-link">258 Chris Hougaard St, Wierdapark</a> Menlyn Shop Centre, Shop 19, Atterbury Rd, Pretoria, 0027 </p>
+<p> Hours:  <select>
+  <option value="11am-9pm">Monday: 09:00 - 17:00 </option>
+  <option value="8am-9:30pm">Tuesday: 09:00 - 17:00</option>
+  <option value="7am-10pm">Wednesday: 09:00 - 17:00</option>
+  <option value="9:30am-10pm">Thursday: 09:00 - 17:00</option>
+  <option value="11:30am-10pm">Friday: 09:00 - 17:00</option>
+  <option value="7am-9pm">Saturday: 09:00 - 13:00</option>
+  <option value="7am-9pm">Sunday: Closed</option>
+</select></p>
+<div class="rating-box">
+  <header>Average Rating:</header>
+  <div class="stars average-stars" id="Mugg & Bean-average-rating">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+  </div>
+</div>
+
+<div class="view-reviews" onclick="handleReviewClick('Mugg & Bean')">Click here to view or submit reviews</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="right-col">
+</div>
+<div class="cafe">
+  <div class="cafe-img">
+      <img src= "C:\Users\Admin\OneDrive - Richfield Graduate Institute of Technology\Documents\GoFinder\GoFinder images\industrialworks.jpg" height="300" width="400">
+
+  </div>
+<div class="cafe-info">
+  <h2><p>Industrial works</p></h2> 
+   <p>Description:Industrial Coffee Works creates a unique place where customers can socialize with each other in a comfortable and relaxing environment while enjoying the best brewed coffee or espresso, pastries, desserts, food made with the freshest ingredients in town.</p>
+   <p>Price Range: R100- R250 </p>
+   <p>Address: <a href="https://www.google.com/maps/dir/?api=1&destination=2018+Hendrik+Verwoerd+Dr,+Centurion+Central" 
+  target="_blank" class="location-link"> 2018 Hendrik Verwoerd Dr, Centurion Central</a> </p>
+<p> Hours:  <select>
+  <option value="11am-9pm">Monday: 09:00 - 17:00 </option>
+  <option value="8am-9:30pm">Tuesday: 09:00 - 17:00</option>
+  <option value="7am-10pm">Wednesday: 09:00 - 17:00</option>
+  <option value="9:30am-10pm">Thursday: 09:00 - 17:00</option>
+  <option value="11:30am-10pm">Friday: 09:00 - 17:00</option>
+  <option value="7am-9pm">Saturday: 09:00 - 13:00</option>
+  <option value="7am-9pm">Sunday: Closed</option>
+</select></p>
+<div class="rating-box">
+  <header>Average Rating:</header>
+  <div class="stars average-stars" id="Industrial works-average-rating">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+  </div>
+</div>
+
+<div class="view-reviews" onclick="handleReviewClick('Industrial works')">Click here to view or submit reviews</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="right-col"></div>
+<div class="sidebar"></div>
+
+</div>
+</div>
+<!-- Reviews Pop-up Template -->
+<div class="overlay" id="reviews-popup-overlay" onclick="closePopup()"></div>
+<div class="reviews-popup" id="reviews-popup">
+    <div class="popup-header">
+        <h3>Your Experience</h3>
+        <div class="stars" id="user-rating">
+            <i class="fa-solid fa-star" onclick="rate(1)"></i>
+            <i class="fa-solid fa-star" onclick="rate(2)"></i>
+            <i class="fa-solid fa-star" onclick="rate(3)"></i>
+            <i class="fa-solid fa-star" onclick="rate(4)"></i>
+            <i class="fa-solid fa-star" onclick="rate(5)"></i>
+        </div>
+    </div>
+
+    <!-- Comment Section -->
+    <div class="review-form">
+        <textarea id="user-review" rows="4" placeholder="Write your review here..." aria-label="Write your review"></textarea>
+        <button onclick="submitReview()">Submit</button>
+    </div>
+
+    <!-- Displaying Existing Reviews -->
+    <div class="reviews-section">
+        <h4>Reviews:</h4>
+        <div id="review-list">
+            <!-- Reviews will be dynamically loaded here -->
+        </div>
+    </div>
+</div>
+</div>
+ </body>   
+

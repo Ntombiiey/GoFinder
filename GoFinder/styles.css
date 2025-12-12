@@ -1,0 +1,203 @@
+ * {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        .list-container {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* Each activity's structure */
+        .activity {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .activity img {
+            height: 400px;
+            width: 350px;
+            margin-right: 20px;
+        }
+
+        .activity-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .rating-box {
+            margin-top: 10px;
+        }
+
+        .rating-box header {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .rating-box .stars {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stars i {
+            color: #e6e6e6;
+            font-size: 25px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .stars i.active {
+            color: #ff9c1a;
+        }
+
+        .view-reviews {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .reviews-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            max-height: 400px;
+            overflow-y: scroll;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .reviews-popup .review {
+            margin-bottom: 10px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* Popup review form - full width for textarea and button */
+        .review-form {
+            margin-bottom: 20px;
+            text-align: center; /* Centering the content */
+        }
+
+        .review-form textarea {
+            width: 100%; /* Textarea width set to 100% */
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
+            margin-bottom: 10px; /* Space between the textarea and the button */
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #9be3f3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #9bccf3;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: brightness(60%);
+            opacity: 0.6;
+        }
+
+        .activity:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Centering the stars in the popup */
+        .popup-header .stars {
+            display: flex;
+            justify-content: center; /* Centering the stars */
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 600px) {
+            .activity {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .activity img {
+                height: 300px;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .activity-info {
+                text-align: center;
+            }
+
+            .reviews-popup {
+                width: 90%;
+            }
+
+            /* Center the average rating stars on small screens */
+            .rating-box .stars {
+                justify-content: center; /* Center the stars */
+                margin: 0 auto;
+            }
+
+            /* Center popup stars on smaller screens */
+            .popup-header .stars {
+                justify-content: center;
+                margin: 0 auto;
+            }
+		}

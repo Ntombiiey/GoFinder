@@ -1,0 +1,364 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>About Us</title> 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('me.jpg') no-repeat center center fixed;
+            background-size: cover;
+			background-attachment: fixed;
+    background-position: center
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header, footer {
+            background-color: #5e48ac;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            width: 100%;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: gold;
+        }
+	
+        .container {
+	position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 0;
+}
+.box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    width: 90%;
+    height: 120%;
+    margin: 1%;
+    padding: 1em;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+       
+ #about, #services, #news, #contact {
+    color: white; 
+    font-weight: bold; 
+}
+
+ 
+ #about {
+    background-image: url('me2.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+	color:white;
+	
+}
+#services {
+    background-image: url('me2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#news {
+    background-image: url('me2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#contact {
+    background-image: url('me2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+    .box {
+        width: 50%;
+        height: auto;
+    }
+}
+   
+	   
+.navbar-logo {
+    padding: 10px;
+   
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    margin-right: 10px;
+     border-radius: 80%;
+    
+}
+
+
+.footer{
+    position: relative;
+    width: 100%;
+    background-color: #5e48ac;
+    min-height: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+.info a:hover{
+    background-color: white;
+    color: #5e48ac;
+    border-radius: 20px;
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url('image/svg (2).png');
+    background-size: 1000px 100px;
+}
+
+.wave:nth-last-of-type(1){
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: anim 4s linear infinite ;
+}
+.wave:nth-last-of-type(2){
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: anim 4s linear infinite !important;
+}
+.wave:nth-last-of-type(3){
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: anim 3s linear infinite !important;
+}
+.wave:nth-last-of-type(4){
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: anim 3s linear infinite !important;
+}
+
+@keyframes anim{
+    0%{
+        background-position-x: 1000px ;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.row .col{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social li{
+    height: 44px;
+    width: 44px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: .6s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li i{
+    font-size: 18px;
+    transition: .6s;
+}
+
+.social li:hover{
+    background-color: #fff;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.social li:hover i{
+    color: #5e48ac;
+}
+
+p {
+    color: white;
+   font-weight: bold;
+    margin-top: 50px;
+}
+    </style>
+    <script> 
+        // Handles simple interactions:
+        function displayDate() { 
+            document.getElementById("date").innerHTML = new Date().toDateString(); 
+        } 
+        function submitForm() { 
+            alert("Thank you for contacting us! We will get back to you shortly."); 
+        } 
+        function toggleAnswer(id) { 
+            var answer = document.getElementById(id); 
+            answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none'; 
+        } 
+        window.onload = function() { 
+            displayDate(); 
+        }; 
+    </script> 
+</head> 
+<body> 
+
+<div class="navbar-logo">
+    <a href="#"><img src="logo.jpeg" alt="" style="width:80px; vertical-align:middle;"> </a>
+</div>
+
+    <header> 
+        <h1>Welcome to GoFinder</h1> 
+        <nav> 
+            <ul> 
+                <li><a href="#about">About Us</a></li> 
+                <li><a href="#services">Our Services</a></li> 
+                <li><a href="#news">News</a></li> 
+                <li><a href="#faq">FAQ</a></li> 
+                <li><a href="#contact">Contact</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+    <div class="container">
+        <section id="about" class="box"> 
+            <h2>About GoFinder</h2> 
+            <p strong>GoFinder simplifies the process of discovering local activities, restaurants, and relaxing spots. Finding activities or relaxing spots in a huge area such as Pretoria can be challenging and time-consuming. It involves visiting multiple locations to compare prices, check for specials, or ensure proper Wi-Fi connectivity for work purposes. We aim to simplify this process by helping users find such locations near them, partnering with local businesses that are not easily found or well-known. 
+			</p> 
+		
+        </section> 
+        <section id="services" class="box"> 
+            <h2>Our Services</h2> 
+            <ul> 
+                <li>Location-based suggestions</li> 
+                <li>Personalized recommendations</li> 
+                <li>Advanced search filters</li> 
+                <li>Exclusive deals with local businesses</li> 
+            </ul> 
+        </section> 
+        <section id="news" class="box"> 
+            <h2>News</h2> 
+            <p id="date"></p> 
+            <p>Are you a "Go Getter", those of us who enjoy going out to grab a bite to eat, have a drink, or just relax with family and/or friends instead of just staying at home. Stay up-to-date with the latest updates from GoFinder and our partner businesses. Check back regularly for exclusive deals and news in your area!  </p> 
+        </section> 
+        <section id="contact" class="box"> 
+            <h2>Contact Us</h2> 
+            <p>We'd love to hear from you! Reach us via email at <a href="mailto:info@gofinder.com">info@gofinder.com</a> or fill out the contact form below.</p> 
+            <form onsubmit="submitForm(); return false;"> 
+                <label for="name">Name:</label> 
+                <input type="text" id="name" name="name" required><br><br> 
+                <label for="email">Email:</label> 
+                <input type="email" id="email" name="email" required><br><br> 
+                <input type="submit" value="Submit"> 
+            </form> 
+        </section> 
+    </div>
+	
+    <footer> 
+	
+		<div class="footer-container">
+        <div class="footer">
+            <div class="waves">
+                 <div class="wave" id="wave1"></div>
+                 <div class="wave" id="wave2"></div>
+                 <div class="wave" id="wave3"></div>
+                 <div class="wave" id="wave4"></div>
+            </div>
+			
+		 <div class="row">
+                <div class="col">
+                    <ul class="social">
+                        <li><i class="fa-brands fa-twitter"></i></li></i>
+                        <li><i class="fa-solid fa-envelope"></i></li>
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-whatsapp"></i></li>
+                    </ul>
+                </div>
+            </div>
+			
+		<div class="row-link">
+                <div class="col">
+                    <div class="info">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Skills</a>
+                        <a href="#">Teams</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+			</div>
+			</div>
+	
+		<a href="#" id="tcpp">Terms & Conditions</a>
+		<a href="#" id="tcpp">Privacy Policy</a>
+        <p>© 2024 GoFinder. All rights reserved.</p> 
+		
+    </footer> 
+	
+</body> 
+</html>

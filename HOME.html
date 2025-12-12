@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="main"> 
+
+<div class="navbar-logo">
+    <a href="HOME.html"><img src="logo.jpeg" alt="#" height="80px" width="50px"></a>
+   
+</div>
+
+<div class="navbar-search"> 
+        <input type="text" placeholder="find your fun...">
+    </div>
+    
+
+     <div class="navbar-filter"></div>
+        <button class="filter-btn" onclick="toggleFilterOptions()">filters</button>
+       <div class="filter-options" id="filterOptions">
+            <b><a href> <label><input type="radio" name="filter" value="location">location</label></a></b>
+            <strong><a href><label><input type="radio" name="filter" value="prices">prices </label> </a></strong>
+            <strong><a href> <label><input type="radio" name="filter" value="free-wifi"> free internet access</label></a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="reviews"> star reviews</label> </a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="trading hours">trading hours</label> </a></strong>
+           <strong><a href><label><input type="radio" name="filter" value="family">family friendly </label> </a></strong> 
+             <strong><a href><label><input type="radio" name="filter" value="party"> life of a party</label> </a></strong>
+             
+    </div>
+<div class="navbar-auth"></div>
+    <strong><button class="get-started" onclick="nav()">Get Started</button></strong>
+    
+</div>
+
+    
+
+        
+    
+
+        <div class="p">
+        <p1>GoFinder is a web-based platform that helps users discover local spots in urban areas like Pretoria. It caters to people who enjoy dining, socializing, or exploring by offering detailed 
+            information about businesses, such as Wi-Fi availability, pet-friendliness, and user reviews. The platform promotes lesser-known local businesses by providing personalized
+            recommendations and features an easy-to-use interface with advanced filters for customized searches. GoFinder aims to boost user engagement and improve visibility for local businesses.</p1>
+        </div>
+
+     
+
+    
+     
+    <div class="slidshow-container">
+        <div class="image">
+    <div class="mySlides fade">
+        <a href="Cafe's.html"><img src="GoFinder images/Cafe.webp" alt="pic1" width="900" height="500"></a>
+   
+   </div>
+
+   <div class="mySlides fade">
+    <a href="Night Life.html"><img src="pic2.png" alt="pic2" width="900" height="500"></a>
+</div>
+   
+  
+</div>
+        <div class="mySlides fade">
+            <a href="Restaurant's.html"><img src="pic 3.png" alt="pic3" width="900" height="500"></a>
+            
+        </div>
+
+        <div class="mySlides fade">
+            <a href="index.html"><img src="pic 4.png" alt="pic4" width="900" height="500"></a>
+            
+        </div>
+    
+</div>
+
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="waves">
+                 <div class="wave" id="wave1"></div>
+                 <div class="wave" id="wave2"></div>
+                 <div class="wave" id="wave3"></div>
+                 <div class="wave" id="wave4"></div>
+            </div>
+
+            <h2></h2>
+
+            <div class="row">
+                <div class="col">
+                    <ul class="social">
+                        <li><i class="fa-brands fa-twitter"></i></li></i>
+                        <li><i class="fa-solid fa-envelope"></i></li>
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-whatsapp"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row-link">
+                <div class="col">
+                    <div class="info">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Skills</a>
+                        <a href="#">Teams</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="copyright">&copy; 2024 GO FINDER. All Rights Reserved. <a href="#" id="tcpp">Terms & Conditions</a> | <a href="#" id="tcpp">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

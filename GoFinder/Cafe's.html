@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretoria Restaurants</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="main"> 
+
+<div class="navbar-logo">
+    <a href="HOME.html"><img src="logo.jpeg" alt="#" height="80px" width="50px"></a>
+   
+</div>
+
+<div class="navbar-search"> 
+        <input type="text" placeholder="find your fun...">
+    </div>
+    
+
+     <div class="navbar-filter"></div>
+        <button class="filter-btn" onclick="toggleFilterOptions()">filters</button>
+       <div class="filter-options" id="filterOptions">
+            <b><a href> <label><input type="radio" name="filter" value="location">location</label></a></b>
+            <strong><a href><label><input type="radio" name="filter" value="prices">prices </label> </a></strong>
+            <strong><a href> <label><input type="radio" name="filter" value="free-wifi"> free internet access</label></a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="reviews"> star reviews</label> </a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="trading hours">trading hours</label> </a></strong>
+           <strong><a href><label><input type="radio" name="filter" value="family">family friendly </label> </a></strong> 
+             <strong><a href><label><input type="radio" name="filter" value="party"> life of a party</label> </a></strong>
+             
+    </div>
+<div class="navbar-auth"></div>
+    <strong><button class="get-started" onclick="nav()">Get Started</button></strong>
+    
+</div>
+<body>
+    <div class="background-image"></div>
+    <div class="list-container">
+        <h1>Cafe's</h1>
+        <div class="activities-container">
+		<!-- Plato Coffee -->
+        <div class="activity" data-activity="plato-coffee">
+            <img src="GoFinder images\PlatoStellies-53_5b3aeb1b-dca1-4228-9908-a6a3ccb6a8ed.webp" alt="Plato Coffee Image">
+            <div class="activity-info">
+                <h2>Plato Coffee</h2>
+                <p><strong>Description:</strong> Come experience the ultimate coffee experience at Plato Coffee. Our premium coffee are expertly crafted to deliver exceptional flavours and quality. From bold and rich to smooth and creamy, we have something to satisfy every palate. Our cosy atmosphere and friendly staff create the perfect environment to relax and enjoy your favourite brew. Visit us today and taste the difference.</p>
+                <p><strong>Price:</strong> R50-R100</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=258+Chris+Hougaard+St,+Wierdapark" style="color:black" target="_blank" class="location-link">Chris Hougaard St, Wierdapark </a></p>
+                <p><strong>Trading Hours:</strong><select>
+              <option value="Monday">Monday: 06:00 - 18:00 </option>
+              <option value="Tuesday">Tuesday: 06:00 - 18:00</option>
+              <option value="Wednesday">Wednesday: 06:00 - 18:00</option>
+              <option value="Thursday">Thursday: 06:00 - 18:00</option>
+              <option value="Friday">Friday: 06:00 - 18:00</option>
+              <option value="Saturday">Saturday: 06:00 - 18:00</option>
+              <option value="Sunday">Sunday: 07:00 - 18:00</option>
+            </select></p>
+
+                <!-- Average Star Rating -->
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="plato-coffee-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('plato-coffee')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+
+        <!-- Irene farm The Deck -->
+        <div class="activity" data-activity="irene-farm">
+            <img src="GoFinder images\TheDeck.jpg" alt="Irene farm The Deck Image">
+            <div class="activity-info">
+                <h2>Irene farm The Deck</h2>
+                <p><strong>Description:</strong> Situated adjacent to and leading directly off The Deli, is a coffee shop restaurant in Centurion, The Deck. Retaining a light, bistro vibe we serve a wide range of breakfast and lunch options.Our scrumptious a la carte menus have been created with fresh and hearty homemade food in mind. These are complimented by the view over the farm (because we know how beautiful it is), the upbeat vibe and the friendly staff.</p>
+                <p><strong>Price:</strong> R150 - R200</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Nellmapius+Rd,+Irene" style="color:black" target="_blank" class="location-link">Nellmapius Rd, Irene, Centurion</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+              <option value="Monday">Monday: 08:00 - 17:30 </option>
+              <option value="Tuesday">Tuesday: 08:00 - 17:30</option>
+              <option value="Wednesday">Wednesday: 08:00 - 17:30</option>
+              <option value="Thursday">Thursday: 08:00 - 17:30</option>
+              <option value="Friday">Friday: 08:00 - 17:30</option>
+              <option value="Saturday">Saturday: 08:00 - 17:30</option>
+              <option value="Sunday">Sunday: 08:00 - 17:30</option>
+            </select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="irene-farm-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('irene-farm')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- Heavenly Coffee's -->
+        <div class="activity" data-activity="heavenly-coffee">
+            <img src="GoFinder images\Heavenly coffees.jpg" alt="Heavenly Coffee's Image">
+            <div class="activity-info">
+                <h2>Heavenly Coffee's</h2>
+                <p><strong>Description:</strong> Heavenly Coffee Trading (Pty)Ltd is an artisan coffee roaster and coffee equipment specialist.</p>
+                <p><strong>Price:</strong> R50 - R100</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Little+Jungle+Playground,1032+Silvergrass+Street,Montana+AH+Pretoria" style="color:black" target="_blank" class="location-link">Retail store Address 2134 Hendrik Verwoerd Drive Hennopspark, Centurion</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 09:00 - 17:00 </option>
+  <option value="Tuesday">Tuesday: 09:00 - 17:00</option>
+  <option value="Wednesday">Wednesday: 09:00 - 17:00</option>
+  <option value="Thursday">Thursday: 09:00 - 17:00</option>
+  <option value="Friday">Friday: 09:00 - 17:00</option>
+  <option value="Saturday">Saturday: 09:00 - 13:00</option>
+  <option value="Sunday">Sunday: Closed</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="heavenly-coffee-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('heavenly-coffee')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+       
+        <!-- Bembom -->
+        <div class="activity" data-activity="bembom">
+            <img src="GoFinder images\Bembom.webp" alt="Bembom Image">
+            <div class="activity-info">
+                <h2>Bembom</h2>
+                <p><strong>Description:</strong> Step into Bembom and be instantly transported to the cobbled streets of Lisbon. Every aroma, flavor, and melody in our café echoes the rich tapestry of Portuguese culture. From the robust aroma of our freshly brewed coffee to the delicate textures of our handcrafted pastries, every moment at Bembom is a sensory delight, waiting to be discovered.</p>
+                <p><strong>Price:</strong> R50 - R250</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Hennops+Hiking+Trail+&+Mtb+Trail,+R511,+Pretoria" style="color:black" target="_blank" class="location-link">Lavender Square, Cnr Braam Pretorius & Lavender RD West, Wonderboom</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 09:00 - 17:00 </option>
+  <option value="Tuesday">Tuesday: 09:00 - 17:00</option>
+  <option value="Wednesday">Wednesday: 09:00 - 17:00</option>
+  <option value="Thursday">Thursday: 09:00 - 17:00</option>
+  <option value="Friday">Friday: 09:00 - 17:00</option>
+  <option value="Saturday">Saturday: 09:00 - 13:00</option>
+  <option value="Sunday">Sunday: Closed</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="bembom-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('bembom')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        
+        <!-- BeeHive Cafe -->
+		<div class="activity" data-activity="beehive-cafe">
+            <img src="GoFinder images\BeeHive Cafe.jpg" alt="BeeHive Cafe Image">
+            <div class="activity-info">
+                <h2>BeeHive Cafe</h2>
+                <p><strong>Description:</strong> Has all you can eat · Has outdoor seating · Serves great cocktails</p>
+                <p><strong>Price:</strong> R50-R100</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=919+Lea+Mangope+Rd,+Mabopane+Unit+x" style="color:black"  target="_blank" class="location-link">919 Lea Mangope Rd, Mabopane Unit X, Mabopane, 0190</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 09:00 - 17:00 </option>
+  <option value="Tuesday">Tuesday: 09:00 - 17:00</option>
+  <option value="Wednesday">Wednesday: 09:00 - 17:00</option>
+  <option value="Thursday">Thursday: 09:00 - 17:00</option>
+  <option value="Friday">Friday: 09:00 - 17:00</option>
+  <option value="Saturday">Saturday: 09:00 - 13:00</option>
+  <option value="Sunday">Sunday: Closed</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="beehive-cafe-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('beehive-cafe')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+        <!-- Sorcery Coffee Roasters Colbyn -->
+		<div class="activity" data-activity="sorcery-coffee">
+            <img src="GoFinder images\Socery coffee.jpg" alt="Sorcery Coffee Roasters Colbyn Image">
+            <div class="activity-info">
+                <h2>Sorcery Coffee Roasters Colbyn</h2>
+                <p><strong>Description:</strong> Please note this is a SELF SERVICE cafe with great coffee and small eats like croissants , cakes, quiches & toasties
+
+    No booking required
+    Kids welcome
+    Small pets on a leash please
+    
+    DRIVE THERE</p>
+                <p><strong>Price:</strong> R100 - R150</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=196+Bernard+st,+Colbyn" style="color:black" target="_blank" class="location-link">196 Bernard St, Colbyn, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 09:00 - 17:00 </option>
+  <option value="Tuesday">Tuesday: 09:00 - 17:00</option>
+  <option value="Wednesday">Wednesday: 09:00 - 17:00</option>
+  <option value="Thursday">Thursday: 09:00 - 17:00</option>
+  <option value="Friday">Friday: 09:00 - 17:00</option>
+  <option value="Saturday">Saturday: 09:00 - 13:00</option>
+  <option value="Sunday">Sunday: Closed</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="sorcery-coffee-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('sorcery-coffee')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Goddess Garden Cafe -->
+		<div class="activity" data-activity="goddess-garden">
+            <img src="GoFinder images\Goddess cafe.jpeg" alt="Goddess Garden Cafe Image">
+            <div class="activity-info">
+                <h2>Goddess Garden Cafe</h2>
+                <p><strong>Description:</strong> Pink themed coffee shop.</p>
+                <p><strong>Price:</strong> R50-R200</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=217+Soutpansberg+Road,+CNR+Belrene+Street,+Rietondale" style="color:black" target="_blank" class="location-link">217 Soutpansberg Road, CNR Belrene Street, Rietondale</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 09:00 - 17:00 </option>
+  <option value="Tuesday">Tuesday: 09:00 - 17:00</option>
+  <option value="Wednesday">Wednesday: 09:00 - 17:00</option>
+  <option value="Thursday">Thursday: 09:00 - 17:00</option>
+  <option value="Friday">Friday: 09:00 - 17:00</option>
+  <option value="Saturday">Saturday: 09:00 - 13:00</option>
+  <option value="Sunday">Sunday: Closed</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="goddess-garden-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('goddess-garden')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Mugg & Bean -->
+		<div class="activity" data-activity="mugg-bean">
+            <img src="GoFinder images\mugg and bean.jpg" alt="Mugg & Bean Image">
+            <div class="activity-info">
+                <h2>Mugg & Bean</h2>
+                <p><strong>Description:</strong> Modern chain cafe serving hearty classics, gourmet burgers and sandwiches, coffee and giant muffins.</p>
+                <p><strong>Price:</strong> R50 - R250</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=258+Chris+Hougaard+St,+Wierdapark" style="color:black" target="_blank" class="location-link">258 Chris Hougaard St, Wierdapark</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 09:00 - 17:00 </option>
+  <option value="Tuesday">Tuesday: 09:00 - 17:00</option>
+  <option value="Wednesday">Wednesday: 09:00 - 17:00</option>
+  <option value="Thursday">Thursday: 09:00 - 17:00</option>
+  <option value="Friday">Friday: 09:00 - 17:00</option>
+  <option value="Saturday">Saturday: 09:00 - 13:00</option>
+  <option value="Sunday">Sunday: Closed</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="mugg-bean-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('mugg-bean')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Industrial Works -->
+		<div class="activity" data-activity="industrial-works">
+            <img src="GoFinder images\industrialworks.jpg" alt="Industrial Works Image">
+            <div class="activity-info">
+                <h2>Industrial Works</h2>
+                <p><strong>Description:</strong> Industrial Coffee Works creates a unique place where customers can socialize with each other in a comfortable and relaxing environment while enjoying the best brewed coffee or espresso, pastries, desserts, food made with the freshest ingredients in town.</p>
+                <p><strong>Price:</strong> R100- R250.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=2018+Hendrik+Verwoerd+Dr,+Centurion+Central" style="color:black"  target="_blank" class="location-link">2018 Hendrik Verwoerd Dr, Centurion Central</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 09:00 - 17:00 </option>
+  <option value="Tuesday">Tuesday: 09:00 - 17:00</option>
+  <option value="Wednesday">Wednesday: 09:00 - 17:00</option>
+  <option value="Thursday">Thursday: 09:00 - 17:00</option>
+  <option value="Friday">Friday: 09:00 - 17:00</option>
+  <option value="Saturday">Saturday: 09:00 - 13:00</option>
+  <option value="Sunday">Sunday: Closed</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="industrial-works-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('industrial-works')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+        
+
+        <!-- Reviews Pop-up Template -->
+        <div class="overlay" id="reviews-popup-overlay" onclick="closePopup()"></div>
+        <div class="reviews-popup" id="reviews-popup">
+            <div class="popup-header">
+                <h3>How Was Your Experience?</h3>
+                <div class="stars" id="user-rating">
+                    <i class="fa-solid fa-star" onclick="rate(1)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(2)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(3)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(4)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(5)"></i>
+                </div>
+            </div>
+
+            <!-- Comment Section -->
+            <div class="review-form">
+                <textarea id="user-review" rows="4" placeholder="Write your review here..." aria-label="Write your review"></textarea>
+                <button onclick="submitReview()">Submit</button>
+            </div>
+
+            <!-- Displaying Existing Reviews -->
+            <div class="reviews-section">
+                <h4>Reviews:</h4>
+                <div id="review-list">
+                    <!-- Reviews will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="waves">
+                 <div class="wave" id="wave1"></div>
+                 <div class="wave" id="wave2"></div>
+                 <div class="wave" id="wave3"></div>
+                 <div class="wave" id="wave4"></div>
+            </div>
+
+            <h2></h2>
+
+            <div class="row">
+                <div class="col">
+                    <ul class="social">
+                        <li><i class="fa-brands fa-twitter"></i></li></i>
+                        <li><i class="fa-solid fa-envelope"></i></li>
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-whatsapp"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row-link">
+                <div class="col">
+                    <div class="info">
+                        <a href="HOME.html">Home</a>
+                        <a href="GF-AboutUs.html">About</a>
+                        <a href="#">Skills</a>
+                        <a href="#">Teams</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="copyright">&copy; 2024 GO FINDER. All Rights Reserved. <a href="#" id="tcpp">Terms & Conditions</a> | <a href="#" id="tcpp">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</html>

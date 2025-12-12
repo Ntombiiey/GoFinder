@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretoria Restaurants</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="main"> 
+
+<div class="navbar-logo">
+    <a href="HOME.html"><img src="logo.jpeg" alt="#" height="80px" width="50px"></a>
+   
+</div>
+
+<div class="navbar-search"> 
+        <input type="text" placeholder="find your fun...">
+    </div>
+    
+
+     <div class="navbar-filter"></div>
+        <button class="filter-btn" onclick="toggleFilterOptions()">filters</button>
+       <div class="filter-options" id="filterOptions">
+            <b><a href> <label><input type="radio" name="filter" value="location">location</label></a></b>
+            <strong><a href><label><input type="radio" name="filter" value="prices">prices </label> </a></strong>
+            <strong><a href> <label><input type="radio" name="filter" value="free-wifi"> free internet access</label></a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="reviews"> star reviews</label> </a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="trading hours">trading hours</label> </a></strong>
+           <strong><a href><label><input type="radio" name="filter" value="family">family friendly </label> </a></strong> 
+             <strong><a href><label><input type="radio" name="filter" value="party"> life of a party</label> </a></strong>
+             
+    </div>
+<div class="navbar-auth"></div>
+    <strong><button class="get-started" onclick="nav()">Get Started</button></strong>
+    
+</div>
+<body>
+    <div class="background-image"></div>
+    <div class="list-container">
+        <h1>Restaurants</h1>
+        <div class="activities-container">
+		<!-- Kota Joe Roadhouse -->
+        <div class="activity" data-activity="kota-joe">
+            <img src="GoFinder images\Kota joe.jpg" alt="Kota Joe Roadhouse Image">
+            <div class="activity-info">
+                <h2>Kota Joe Roadhouse</h2>
+                <p><strong>Description:</strong> Kota Joe Roadhouse is a drive in where they serve you to your car ! They have milkshakes ,different foods and great waiters and waitress .Make your way to Kota Joe Roadhouse you will not regret it.</p>
+                <p><strong>Price:</strong> R100-R250</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=1+Lavender+Rd+W+&+Pietro+st,+Wonderboom" style="color:black" target="_blank" class="location-link">1 Lavender Rd W & Pietro St, Wonderboom, Pretoria, 0066</a></p>
+                <p><strong>Trading Hours:</strong><select>
+              <option value="Monday">Monday:11:00-21:00 </option>
+              <option value="Tuesday">Tuesday: 11:00-21:00</option>
+              <option value="Wednesday">Wednesday: 11:00-21:00</option>
+              <option value="Thursday">Thursday: 11:00-21:00</option>
+              <option value="Friday">Friday: 11:00-22:00</option>
+              <option value="Saturday">Saturday: 10:00-22:00</option>
+              <option value="Sunday">Sunday: 10:00-21:00</option>
+            </select></p>
+
+                <!-- Average Star Rating -->
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="kota-joe-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('kota-joe')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+
+        <!-- Cappuccinos -->
+        <div class="activity" data-activity="cappuccinos">
+            <img src="GoFinder images\cuppuccinos.jpg" alt="Cappuccinos Image">
+            <div class="activity-info">
+                <h2>Cappuccinos</h2>
+                <p><strong>Description:</strong> Has outdoor seating · Serves great cocktails · Serves vegan dishes</p>
+                <p><strong>Price:</strong> R100-R250</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Wonderboom+Junction+Shopping+center,+Annlin" style="color:black"  target="_blank" class="location-link">Shop No. G02 Wonderboom Junction Shopping Centre, Lavender Rd, Annlin, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+              <option value="Monday">Monday:08:30-23:30</option>
+        <option value="Tuesday">Tuesday: 08:30-23:30</option>
+        <option value="Wednesday">Wednesday: 08:30-23:30</option>
+        <option value="Thursday">Thursday: 08:30-23:30</option>
+        <option value="Friday">Friday: 08:30-23:30 </option>
+        <option value="Saturday">Saturday: 08:30-22:00</option>
+        <option value="Sunday">Sunday: 08:30-22:00</option>
+            </select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="cappuccinos-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('cappuccinos')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- Parrots -->
+        <div class="activity" data-activity="parrots">
+            <img src="GoFinder images\parrots.jpg" alt="Parrots Image">
+            <div class="activity-info">
+                <h2>Parrots</h2>
+                <p><strong>Description:</strong> Has all you can eat · Serves great cocktails · Serves vegan dishes.</p>
+                <p><strong>Price:</strong> R100 - R300</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=385+Heinrich+Ave,+Karenpark" style="color:black" target="_blank" class="location-link">385 Heinrich Ave, Karenpark, Akasia</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 09:00-20:00 </option>
+        <option value="Tuesday">Tuesday: 09:00-20:00 </option>
+        <option value="Wednesday">Wednesday: 09:00-20:00 </option>
+        <option value="Thursday">Thursday: 09:00-20:00</option>
+        <option value="Friday">Friday: 09:00-21:00</option>
+        <option value="Saturday">Saturday: 09:00-21:00</option>
+        <option value="Sunday">Sunday: 09:00-18:00</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="parrots-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('parrots')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- THE GRILL HUB -->
+        <div class="activity" data-activity="grill-house">
+            <img src="GoFinder images\the grill hub.jpg" alt="THE GRILL HUB Image">
+            <div class="activity-info">
+                <h2>THE GRILL HUB</h2>
+                <p><strong>Description:</strong> Welcome to The Grill Hub in Atteridgeville, Pretoria – your go-to spot for delicious meals in a cozy atmosphere. Enjoy a variety of options for breakfast, brunch, lunch, and dinner with seating available.</p>
+                <p><strong>Price:</strong> R50-R150.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=57+Seeiso+St,+Atteridgeville,+Pretoria" style="color:black" target="_blank" class="location-link">57 Seeiso St, Atteridgeville, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: </option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="grill-house-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('grill-house')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- The Rock -->
+        <div class="activity" data-activity="the-rock">
+            <img src="GoFinder images\The Rock.jpg" alt="The Rock Image">
+            <div class="activity-info">
+                <h2>The Rock</h2>
+                <p><strong>Description:</strong> The Rock-Hazelwood in Pretoria is a fine dining establishment that offers a diverse menu of delectable cuisine. The restaurant boasts an inviting ambiance and beautiful interior design that is sure to impress any patron. The price range is reasonable, making it accessible to all.</p>
+                <p><strong>Price:</strong> </p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=147+Pinaster+Ave,+Hazelwood" style="color:black" target="_blank" class="location-link">Shop 113, The Club Retail Centre, 147 Pinaster Ave, Hazelwood, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 10:00-22:00 </option>
+        <option value="Tuesday">Tuesday: 10:00-22:00</option>
+        <option value="Wednesday">Wednesday: 10:00-22:00</option>
+        <option value="Thursday">Thursday: 10:00-22:00</option>
+        <option value="Friday">Friday: 10:00-22:00</option>
+        <option value="Saturday">Saturday: 10:00-22:00</option>
+        <option value="Sunday">Sunday: 10:00-21:00</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="the-rock-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('the-rock')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        
+        <!-- Taso's Bar Grill Hazelwood -->
+		<div class="activity" data-activity="taso-bar">
+            <img src="GoFinder images\Taso's.jpg" alt="Taso's Bar Grill Hazelwood Image">
+            <div class="activity-info">
+                <h2>Taso's Bar Grill Hazelwood</h2>
+                <p><strong>Description:</strong> </p>
+                <p><strong>Price:</strong> </p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=258+Chris+Hougaard+St,+Wierdapark" style="color:black" target="_blank" class="location-link">Cnr. Firwood Avenue &, 16th St, Hazelwood, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 11:00 - 20:00 </option>
+        <option value="Tuesday">Tuesday: 11:00 - 21:00</option>
+        <option value="Wednesday">Wednesday: 11:00 - 21:00</option>
+        <option value="Thursday">Thursday: 11:00 - 21:00</option>
+        <option value="Friday">Friday: 11:00 - 22:00</option>
+        <option value="Saturday">Saturday: 11:00 - 22:00</option>
+        <option value="Sunday">Sunday: 11:00 - 20:00</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="taso-bar-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('taso-bar')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Fireroom Castle Gate -->
+		<div class="activity" data-activity="fireroom-castle">
+            <img src="GoFinder images\fireroom.webp" alt="Fireroom Castle Gate Image">
+            <div class="activity-info">
+                <h2>Fireroom Castle Gate</h2>
+                <p><strong>Description:</strong> Serves happy-hour food · Has private dining room · Serves great cocktails.</p>
+                <p><strong>Price:</strong> </p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=478+Koedoesnek+Ave,+Waterkloof+Ridge" style="color:black" target="_blank" class="location-link">478 Koedoesnek Ave, Waterkloof Ridge, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value="Monday">Monday: 11:30-22:00 </option>
+        <option value="Tuesday">Tuesday: 11:30-22:00</option>
+        <option value="Wednesday">Wednesday: 11:30-22:00</option>
+        <option value="Thursday">Thursday: 11:30-22:00</option>
+        <option value="Friday">Friday: 11:30-23:00</option>
+        <option value="Saturday">Saturday: 11:30-23:00</option>
+        <option value="Sunday">Sunday: 11:30-23:00</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="fireroom-castle-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('fireroom-castle')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Tashas Menlyn Maine -->
+		<div class="activity" data-activity="tashas-menlyn">
+            <img src="GoFinder images\tashas.jpg" alt="Tashas Menlyn Maine Image">
+            <div class="activity-info">
+                <h2>Tashas Menlyn Maine</h2>
+                <p><strong>Description:</strong> Has outdoor seating · Serves great cocktails · Serves vegan dishes.</p>
+                <p><strong>Price:</strong> </p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=258+Chris+Hougaard+St,+Wierdapark" style="color:black" target="_blank" class="location-link">Ext2, Central Square, Store 42, Cnr Corobay and, Aramist Ave, Waterkloof Glen, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> <select>
+  <option value=" Monday">Monday: 07:00-21:00</option>
+        <option value="Tuesday">Tuesday: 07:00-21:00</option>
+        <option value="Wednesday">Wednesday: 07:00-21:00</option>
+        <option value="Thursday">Thursday: 07:00-21:00</option>
+        <option value="Friday">Friday: 07:30-21:00</option>
+        <option value="Saturday">Saturday:07:30-21:00</option>
+        <option value="Sunday">Sunday:07:30-21:00</option>
+</select></p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="tashas-menlyn-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('tashas-menlyn')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        
+
+        <!-- Reviews Pop-up Template -->
+        <div class="overlay" id="reviews-popup-overlay" onclick="closePopup()"></div>
+        <div class="reviews-popup" id="reviews-popup">
+            <div class="popup-header">
+                <h3>How Was Your Experience?</h3>
+                <div class="stars" id="user-rating">
+                    <i class="fa-solid fa-star" onclick="rate(1)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(2)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(3)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(4)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(5)"></i>
+                </div>
+            </div>
+
+            <!-- Comment Section -->
+            <div class="review-form">
+                <textarea id="user-review" rows="4" placeholder="Write your review here..." aria-label="Write your review"></textarea>
+                <button onclick="submitReview()">Submit</button>
+            </div>
+
+            <!-- Displaying Existing Reviews -->
+            <div class="reviews-section">
+                <h4>Reviews:</h4>
+                <div id="review-list">
+                    <!-- Reviews will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="waves">
+                 <div class="wave" id="wave1"></div>
+                 <div class="wave" id="wave2"></div>
+                 <div class="wave" id="wave3"></div>
+                 <div class="wave" id="wave4"></div>
+            </div>
+
+            <h2></h2>
+
+            <div class="row">
+                <div class="col">
+                    <ul class="social">
+                        <li><i class="fa-brands fa-twitter"></i></li></i>
+                        <li><i class="fa-solid fa-envelope"></i></li>
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-whatsapp"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row-link">
+                <div class="col">
+                    <div class="info">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Skills</a>
+                        <a href="#">Teams</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="copyright">&copy; 2024 GO FINDER. All Rights Reserved. <a href="#" id="tcpp">Terms & Conditions</a> | <a href="#" id="tcpp">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+<script src="scripts.js"></script>
+</html>

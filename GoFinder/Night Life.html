@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretoria Night Life</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="main"> 
+
+<div class="navbar-logo">
+    <a href="HOME.html"><img src="logo.jpeg" alt="#" height="80px" width="50px"></a>
+   
+</div>
+
+<div class="navbar-search"> 
+        <input type="text" placeholder="find your fun...">
+    </div>
+    
+
+     <div class="navbar-filter"></div>
+        <button class="filter-btn" onclick="toggleFilterOptions()">filters</button>
+       <div class="filter-options" id="filterOptions">
+            <b><a href> <label><input type="radio" name="filter" value="location">location</label></a></b>
+            <strong><a href><label><input type="radio" name="filter" value="prices">prices </label> </a></strong>
+            <strong><a href> <label><input type="radio" name="filter" value="free-wifi"> free internet access</label></a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="reviews"> star reviews</label> </a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="trading hours">trading hours</label> </a></strong>
+           <strong><a href><label><input type="radio" name="filter" value="family">family friendly </label> </a></strong> 
+             <strong><a href><label><input type="radio" name="filter" value="party"> life of a party</label> </a></strong>
+             
+    </div>
+<div class="navbar-auth"></div>
+    <strong><button class="get-started" onclick="nav()">Get Started</button></strong>
+    
+</div>
+<body>
+    <div class="background-image"></div>
+    <div class="list-container">
+        <h1>Night Life</h1>
+        <div class="activities-container">
+		<!-- ZanZou Bar & Lounge -->
+        <div class="activity" data-activity="zanzou-bar">
+            <img src="images/zanzou.jpg" alt="ZanZou Bar & Lounge Image">
+            <div class="activity-info">
+                <h2>ZanZou Bar & Lounge</h2>
+                <p><strong>Description:</strong> Opulent lounge known for its exclusive vibrant nightlife.</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=525+Duncan+St,+Hatfield" style="color:black" target="_blank" class="location-link">525 Duncan St, Hatfield</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Sunday: 17:00 - 02:00</p>
+
+                <!-- Average Star Rating -->
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="zanzou-bar-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('zanzou-bar')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+
+        <!-- Europa Lounge Experience -->
+        <div class="activity" data-activity="europa-lounge">
+            <img src="images/europa.jpg" alt="Europa Lounge Experience Image">
+            <div class="activity-info">
+                <h2>Europa Lounge Experience</h2>
+                <p><strong>Description:</strong> Known for its stylish and sophisticated atmosphere, it offers high-end bottle service, great food, and a mix of music genres.</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=113+Robert+Sobukwe+St,+Pretoria" style="color:black"  target="_blank" class="location-link">113 Robert Sobukwe St, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Sunday: 16:00 - 04:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="europa-lounge-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('europa-lounge')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- Propaganda -->
+        <div class="activity" data-activity="propaganda">
+            <img src="images/propaganda.webp" alt="Propaganda Image">
+            <div class="activity-info">
+                <h2>Propaganda</h2>
+                <p><strong>Description:</strong> Propaganda is the biggest entertainment destination by offering top-class entertainment and a lively atmosphere.</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=271+Struben+St,+Pretoria" style="color:black"  target="_blank" class="location-link">271 Struben Street, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Sunday: 11:00 - 04:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="propaganda-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('propaganda')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- Blue Room Hatfield -->
+        <div class="activity" data-activity="blue-room">
+            <img src="images/blue_room.JPG" alt="Blue Room Hatfield Image">
+            <div class="activity-info">
+                <h2>Blue Room Hatfield</h2>
+                <p><strong>Description:</strong> Welcome to Blue Room Hatfield, Where Legends Rising Take Center-Stage</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=1057+Arcadia+St,+Hatfield" style="color:black"  target="_blank" class="location-link">1057 Arcadia Street, Hatfield</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Sunday: 10:00 - 04:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="blue-room-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('blue-room')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- Pablo Bar -->
+        <div class="activity" data-activity="pablo-bar">
+            <img src="images/pablo.jpg" alt="Pablo Bar Image">
+            <div class="activity-info">
+                <h2>Pablo Bar</h2>
+                <p><strong>Description:</strong> </p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=440+Hilda+St,+Hatfield" style="color:black" target="_blank" class="location-link">440 Hilda Street, Hatfield</a></p>
+                <p><strong>Trading Hours:</strong> Trading Hours: Tuesday to Sunday: 14:00 - 02:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="pablo-bar-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('pablo-bar')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        
+        <!-- Ayoba Cafe Shisanyama -->
+		<div class="activity" data-activity="ayoba-cafe">
+            <img src="images/ayoba.jpg" alt="Ayoba Cafe Shisanyama Image">
+            <div class="activity-info">
+                <h2>Ayoba Cafe Shisanyama</h2>
+                <p><strong>Description:</strong> A great taste of an african cuisine.</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Ayoba+Cafe+Shisanyama,+Trevenna,+Pretoria" style="color:black" target="_blank" class="location-link">Cnr Robert Sobukwe Street & Greef Street, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Trading Hours: Monday to Sunday: 09:00 - 02:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="ayoba-cafe-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('ayoba-cafe')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+        <!-- Channel M -->
+		<div class="activity" data-activity="channel-m">
+            <img src="images/channel_m.jpg" alt="Channel M Image">
+            <div class="activity-info">
+                <h2>Channel M</h2>
+                <p><strong>Description:</strong> It's trendy spot known for its spacious dance floor and underground as well as mainstream DJs.</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=193+Bosman+St,+Pretoria" style="color:black" target="_blank" class="location-link">193 Bosman Street, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Sunday: 11:00 - 04:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="channel-m-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('channel-m')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- The Social Club Hatfield -->
+		<div class="activity" data-activity="social-club">
+            <img src="images/tsc.jpg" alt="The Social Club Hatfield Image">
+            <div class="activity-info">
+                <h2>The Social Club Hatfield</h2>
+                <p><strong>Description:</strong> A club popular among students and young professionals, it features a lively atmosphere and a variety of music</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=1119+Burnett+St,+Hatfield" style="color:black" target="_blank" class="location-link">Shop 1 Primo House, 1119 Burnett Street, Hatfield</a></p>
+                <p><strong>Trading Hours:</strong> Tuesday to Sunday: 11:00 - 02:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="social-club-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('social-club')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Blue Room CBD -->
+		<div class="activity" data-activity="blue-room2">
+            <img src="images/blue_room.png" alt="Blue Room CBD Image">
+            <div class="activity-info">
+                <h2>Blue Room CBD</h2>
+                <p><strong>Description:</strong> A legendary landmark known for its vibrant atmosphere, it's a great spot for those looking to enjoy a mix of local and international music</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=18+WF+Nkomo+St,+Pretoria" target="_blank" class="location-link">Cnr WF Nkomo & Bosman Street, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Trading Hours: Monday to Sunday: 11:00 - 04:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="blue-room2-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('blue-room2')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Amaros Pretoria -->
+		<div class="activity" data-activity="amaros-pretoria">
+            <img src="images/amaros.jpg" alt="Amaros Pretoria Image">
+            <div class="activity-info">
+                <h2>Amaros Pretoria</h2>
+                <p><strong>Description:</strong> It's a multi-level venue combining a resturant, bar, nightclub, and rooftop. It features a tropical and cozy vibe with an industrial touch, and hosts a variety of music genres.</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=179+Bosman+St,+Pretoria" style="color:black" target="_blank" class="location-link">179 Bosman Street, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Trading Hours: Monday to Sunday: 12:00 - 02:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="amaros-pretoria-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('amaros-pretoria')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+        <!-- eKhaya Hatfield -->
+		<div class="activity" data-activity="ekhaya-hatfield">
+            <img src="images/ekhaya.png" alt="eKhaya Hatfield Image">
+            <div class="activity-info">
+                <h2>eKhaya Hatfield</h2>
+                <p><strong>Description:</strong> Chilled vibes, good food and ridiculous drinking prices.</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=1119+Burnett+St,+Hatfield" style="color:black" target="_blank" class="location-link">Shop 2 Primo house, 1119 Burnett Street, Hatfield</a></p>
+                <p><strong>Trading Hours:</strong> Trading Hours: Tuesday to Sunday: 11:00 - 02:00</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="ekhaya-hatfield-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('ekhaya-hatfield')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Moloko Menlyn -->
+		<div class="activity" data-activity="moloko-menlyn">
+            <img src="images/moloko.jpg" alt="Moloko Menlyn Image">
+            <div class="activity-info">
+                <h2>Moloko Menlyn</h2>
+                <p><strong>Description:</strong> Known for its upscale vibe and is a favorite for those looking to enjoy a night out in style.</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=1+Menlyn+Place,+Pretoria" style="color:black" target="_blank" class="location-link">1 Lois Ave & Atterbury Menlyn Park, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Trading Hours: Friday to Saturday: 11:00 - 00:00, Sunday: 12:00 - 06:00</p>
+                
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="moloko-menlyn-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('moloko-menlyn')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- House 22 -->
+		<div class="activity" data-activity="house-22">
+            <img src="images/house_22.jpg" alt="House 22 Image">
+            <div class="activity-info">
+                <h2>House 22</h2>
+                <p><strong>Description:</strong> It offers a variety of reasonably priced drinks and a lively party atmosphere</p>
+                <p><strong>Price:</strong> Entry fees vary; Varies by Product.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=22+Gerhard+Moerdyk+St,+Pretoria" style="color:black" target="_blank" class="location-link">22 Gerhard Moerdyk Street, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Trading Hours: Monday to Thursday: 10:00 - 23:00, Friday to Sunday: 10:00 - 02:00</p>
+                
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="house-22-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('house-22')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        
+
+        <!-- Reviews Pop-up Template -->
+        <div class="overlay" id="reviews-popup-overlay" onclick="closePopup()"></div>
+        <div class="reviews-popup" id="reviews-popup">
+            <div class="popup-header">
+                <h3>How Was Your Experience?</h3>
+                <div class="stars" id="user-rating">
+                    <i class="fa-solid fa-star" onclick="rate(1)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(2)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(3)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(4)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(5)"></i>
+                </div>
+            </div>
+
+            <!-- Comment Section -->
+            <div class="review-form">
+                <textarea id="user-review" rows="4" placeholder="Write your review here..." aria-label="Write your review"></textarea>
+                <button onclick="submitReview()">Submit</button>
+            </div>
+
+            <!-- Displaying Existing Reviews -->
+            <div class="reviews-section">
+                <h4>Reviews:</h4>
+                <div id="review-list">
+                    <!-- Reviews will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="waves">
+                 <div class="wave" id="wave1"></div>
+                 <div class="wave" id="wave2"></div>
+                 <div class="wave" id="wave3"></div>
+                 <div class="wave" id="wave4"></div>
+            </div>
+
+            <h2></h2>
+
+            <div class="row">
+                <div class="col">
+                    <ul class="social">
+                        <li><i class="fa-brands fa-twitter"></i></li></i>
+                        <li><i class="fa-solid fa-envelope"></i></li>
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-whatsapp"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row-link">
+                <div class="col">
+                    <div class="info">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Skills</a>
+                        <a href="#">Teams</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="copyright">&copy; 2024 GO FINDER. All Rights Reserved. <a href="#" id="tcpp">Terms & Conditions</a> | <a href="#" id="tcpp">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</html>

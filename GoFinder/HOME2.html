@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>GoFinder - Find Your Perfect Spot</title>
+ <link rel="stylesheet" href="styles.css">
+ <script>
+ // JavaScript to handle simple interactions
+ // Display current date in the news section
+ function displayDate() {
+ document.getElementById("date").innerHTML = new Date().toDateString();
+ }
+ // Form submission functionality for Contact Us
+ function submitForm() {
+ alert("Thank you for contacting us! We will get back to you shortly.");
+ }
+ // FAQs toggle function
+ function toggleAnswer(id) {
+ var answer = document.getElementById(id);
+ answer.style.display = (answer.style.display === 'none' || answer.style.display === '') 
+? 'block' : 'none';
+ }
+ window.onload = function() {
+ displayDate();
+ };
+ </script>
+</head>
+<body>
+ <header>
+ <h1>Welcome to GoFinder</h1>
+ <nav>
+ <ul>
+ <li><a href="#about">About Us</a></li>
+ <li><a href="#services">Our Services</a></li>
+ <li><a href="#news">News</a></li>
+ <li><a href="#faq">FAQ</a></li>
+ <li><a href="#contact">Contact</a></li>
+ </ul>
+ </nav>
+ </header>
+ <section id="about">
+ <h2>About GoFinder</h2>
+ <p>GoFinder simplifies the process of discovering local activities, restaurants, and 
+relaxing spots. Whether you're searching for a café with strong Wi-Fi or a pet-friendly 
+restaurant, our platform has you covered.</p>
+ </section>
+ <section id="services">
+ <h2>Our Services</h2>
+ <ul>
+ <li>Location-based suggestions</li>
+ <li>Personalized recommendations</li>
+ <li>Advanced search filters</li>
+ <li>Exclusive deals with local businesses</li>
+ </ul>
+ </section>
+ <section id="news">
+ <h2>News</h2>
+ <p id="date"></p>
+ <p>Stay up-to-date with the latest updates from GoFinder and our partner businesses. 
+Check back regularly for exclusive deals and news in your area!</p>
+ </section>
+ <section id="faq">
+ <h2>FAQ</h2>
+ <ul>
+ <li><a href="javascript:void(0);" onclick="toggleAnswer('faq1')">How do I use 
+GoFinder?</a></li>
+ <p id="faq1" style="display:none;">Simply sign up, set your preferences, and start 
+exploring the best local spots near you.</p>
+ <li><a href="javascript:void(0);" onclick="toggleAnswer('faq2')">Is GoFinder 
+free?</a></li>
+ <p id="faq2" style="display:none;">Yes, GoFinder is free to use, with optional 
+premium features available for more personalized recommendations.</p>
+ <li><a href="javascript:void(0);" onclick="toggleAnswer('faq3')">How can I partner 
+my business with GoFinder?</a></li>
+ <p id="faq3" style="display:none;">Contact us through the form below or at <a 
+href="mailto:partners@gofinder.com">partners@gofinder.com</a>.</p>
+ </ul>
+ </section>
+ <section id="contact">
+ <h2>Contact Us</h2>
+ <p>We'd love to hear from you! Reach us via email at <a 
+href="mailto:info@gofinder.com">info@gofinder.com</a> or fill out the contact form 
+below.</p>
+ <form onsubmit="submitForm(); return false;">
+ <label for="name">Name:</label>
+ <input type="text" id="name" name="name" required><br><br>
+ <label for="email">Email:</label>
+ <input type="email" id="email" name="email" required><br><br>
+ <input type="submit" value="Submit">
+ </form>
+ </section>
+ <footer>
+ <p>&copy; 2024 GoFinder. All rights reserved.</p>
+ </footer>
+</body>
+</html

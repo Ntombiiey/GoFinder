@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretoria Activities</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="main"> 
+
+<div class="navbar-logo">
+    <a href="HOME.html"><img src="logo.jpeg" alt="#" height="80px" width="50px"></a>
+   
+</div>
+
+<div class="navbar-search"> 
+        <input type="text" placeholder="find your fun...">
+    </div>
+    
+
+     <div class="navbar-filter"></div>
+        <button class="filter-btn" onclick="toggleFilterOptions()">filters</button>
+       <div class="filter-options" id="filterOptions">
+            <b><a href> <label><input type="radio" name="filter" value="location">location</label></a></b>
+            <strong><a href><label><input type="radio" name="filter" value="prices">prices </label> </a></strong>
+            <strong><a href> <label><input type="radio" name="filter" value="free-wifi"> free internet access</label></a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="reviews"> star reviews</label> </a></strong>
+            <strong><a href><label><input type="radio" name="filter" value="trading hours">trading hours</label> </a></strong>
+           <strong><a href><label><input type="radio" name="filter" value="family">family friendly </label> </a></strong> 
+             <strong><a href><label><input type="radio" name="filter" value="party"> life of a party</label> </a></strong>
+             
+    </div>
+<div class="navbar-auth"></div>
+    <strong><button class="get-started" onclick="nav()">Get Started</button></strong>
+    
+</div>
+<body>
+    <div class="background-image"></div>
+    <div class="list-container">
+        <h1>Activities and Entertainment</h1>
+        <div class="activities-container">
+		<!-- Pretoria Zoo -->
+        <div class="activity" data-activity="pretoria-zoo">
+            <img src="images/pretoria_zoo.jpg" alt="Pretoria Zoo Image">
+            <div class="activity-info">
+                <h2>Pretoria Zoo</h2>
+                <p><strong>Description:</strong> The National Zoological Gardens of South Africa, commonly known as Pretoria Zoo, is one of the largest zoos in the country, featuring a wide variety of animals and a cableway.</p>
+                <p><strong>Price:</strong> Adults: R110, Children (2-15 years): R70</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Pretoria+Zoo,+232+Boom+Street,+Pretoria" style="color:black" target="_blank" class="location-link">232 Boom Street, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Daily from 8:30 AM to 5:30 PM</p>
+
+                <!-- Average Star Rating -->
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="pretoria-zoo-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('pretoria-zoo')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+
+        <!-- Zita Park -->
+        <div class="activity" data-activity="zita-park">
+            <img src="images/zita_park.jpg" alt="Zita Park Image">
+            <div class="activity-info">
+                <h2>Zita Park</h2>
+                <p><strong>Description:</strong> A family-friendly water park with pools, slides, and picnic areas.</p>
+                <p><strong>Price:</strong> Entry fees vary; typically around R50 per person.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Zita+Park,+Zita+St,+Garsfontein,+Pretoria" style="color:black"  target="_blank" class="location-link">Zita St, Garsfontein, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Daily from 9:00 AM to 5:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="zita-park-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('zita-park')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- Little Jungle Indoor Playground -->
+        <div class="activity" data-activity="little-jungle">
+            <img src="images/little_jungle.jpg" alt="Little Jungle Indoor Playground Image">
+            <div class="activity-info">
+                <h2>Little Jungle Indoor Playground</h2>
+                <p><strong>Description:</strong> An indoor play area with jungle gyms, trampolines, and various activities for kids.</p>
+                <p><strong>Price:</strong> Entry fees vary; typically around R80 per child.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Little+Jungle+Playground,1032+Silvergrass+Street,Montana+AH+Pretoria" style="color:black"  target="_blank" class="location-link">1032 Silvergrass St, Montana AH, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Saturday from 9:00 AM to 6:00 PM, Sunday from 10:00 AM to 4:00 PM</p>
+
+                <div class="rating-box">
+                                        <header>Average Rating:</header>
+                    <div class="stars average-stars" id="little-jungle-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('little-jungle')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- K1 Karting -->
+        <div class="activity" data-activity="k1-karting">
+            <img src="images/k1_karting.jpg" alt="K1 Karting Image">
+            <div class="activity-info">
+                <h2>K1 Karting</h2>
+                <p><strong>Description:</strong> An indoor go-karting track offering high-speed racing experiences.</p>
+                <p><strong>Price:</strong> R150 per race.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=K1+Indoor+Karting,+Zambezi+Dr,+Montana+Park,+Pretoria" style="color:black"  target="_blank" class="location-link">Zambezi Dr, Montana Park, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Friday from 10:00 AM to 9:00 PM, Saturday and Sunday from 10:00 AM to 10:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="k1-karting-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('k1-karting')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- Hennops Hiking Trail -->
+        <div class="activity" data-activity="hennops-hiking">
+            <img src="images/hennops_trail.jpg" alt="Hennops Hiking Trail Image">
+            <div class="activity-info">
+                <h2>Hennops Hiking Trail</h2>
+                <p><strong>Description:</strong> A scenic hiking trail with various routes ranging from 2.5 km to 10 km.</p>
+                <p><strong>Price:</strong> R100 per person</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Hennops+Hiking+Trail+&+Mtb+Trail,+R511,+Pretoria" style="color:black" target="_blank" class="location-link">Hennops Hiking Trail & Mtb Trail, R511, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Daily from 7:00 AM to 1:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="hennops-hiking-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('hennops-hiking')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- More activities follow the same structure as the ones above: -->
+        <!-- Grove Ice Rink -->
+		<div class="activity" data-activity="grove-ice">
+            <img src="images/grove_ice.jpeg" alt="Grove Ice Rink Image">
+            <div class="activity-info">
+                <h2>Grove Ice Rink</h2>
+                <p><strong>Description:</strong> An ice skating rink located in The Grove Mall, suitable for all ages.</p>
+                <p><strong>Price:</strong> R90 per session, skate hire: R35</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Grove+Ice+Rink,+The+Grove+Mall,+Lynnwood+Rd,+Die+Wilgers,+Pretoria" style="color:black" target="_blank" class="location-link">The Grove Mall, Lynnwood Rd, Die Wilgers, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Thursday from 8:00 AM to 10:00 PM, Friday from 8:00 AM to 5:00 PM, Saturday and Sunday from 8:00 AM to 10:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="grove-ice-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('grove-ice')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+        <!-- Rietvlei Nature Reserve -->
+		<div class="activity" data-activity="rietvlei-nature">
+            <img src="images/rietvlei_nature.jpg" alt="Rietvlei Nature Reserve Image">
+            <div class="activity-info">
+                <h2>Rietvlei Nature Reserve</h2>
+                <p><strong>Description:</strong> A large nature reserve offering wildlife viewing, picnics, and nature walks.</p>
+                <p><strong>Price:</strong> Adults (18 to 59 years): R75. Pensioners (60 years and older with proof thereof) and persons with disabilities and Schoolchildren (7 to 17 years): R44. Preschool children (2 to 6 years): R15. Infants (0 to 2 years): Free of charge</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Rietvlei+Nature+Reserve,+14+Game+Reserve+Ave,+Rietvallei+377-Jr,+Pretoria" style="color:black" target="_blank" class="location-link">14 Game Reserve Avenue, Rietvlei Dam, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday and Wednesday from 11:00 AM to 6:00 PM, Tuesday and Thursday to Sunday from 6:00 AM to 6:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="rietvlei-nature-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('rietvlei-nature')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Groenkloof Nature Reserve -->
+		<div class="activity" data-activity="groenkloof-nature">
+            <img src="images/groenkloof_nature.jpg" alt="Groenkloof Nature Reserve Image">
+            <div class="activity-info">
+                <h2>Groenkloof Nature Reserve</h2>
+                <p><strong>Description:</strong> Offers hiking, mountain biking, and a 4x4 route in a beautiful natural setting.</p>
+                <p><strong>Price:</strong> Adults (18 to 59 years): R58. Pensioners (60 years and older with proof thereof) and persons with disabilities and Schoolchildren (7 to 17 years): R37. Preschool children (3 to 6 years): R21. Infants (0 to 2 years): Free of charge</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Christina+De+Wit+Avenue,+Groenkloof,+Pretoria" style="color:black"  target="_blank" class="location-link">Christina De Wit Avenue, Groenkloof, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Daily from 5:30 AM to 7:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="groenkloof-nature-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('groenkloof-nature')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Pretoria National Botanical Garden -->
+		<div class="activity" data-activity="pretoria-national">
+            <img src="images/pretoria_national.jpg" alt="Pretoria National Botanical Garden Image">
+            <div class="activity-info">
+                <h2>Pretoria National Botanical Garden</h2>
+                <p><strong>Description:</strong> A 76-hectare garden showcasing various South African habitats.</p>
+                <p><strong>Price:</strong> Adults: R40, Children: R15</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Botanical+Gardens,+Cussonia+Ave,+Brummeria,+Pretoria" style="color:black" target="_blank" class="location-link">Cussonia Ave, Brummeria, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Daily from 8:00 AM to 6:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="pretoria-national-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('pretoria-national')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- The Fun Company Menlyn Park -->
+		<div class="activity" data-activity="fun-company">
+            <img src="images/fun_company.jpg" alt="The Fun Company Menlyn Park Image">
+            <div class="activity-info">
+                <h2>The Fun Company Menlyn Park</h2>
+                <p><strong>Description:</strong> Features arcade games, virtual reality adventures, and more.</p>
+                <p><strong>Price:</strong> Prices vary per activity.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=The+Fun+Company+Menlyn+Park,+Shop+SH13,+Menlyn+Park+Shopping+Centre+Cnr+Atterbury+Road+&,+Lois Ave,+Menlyn,+Pretoria" style="color:black" target="_blank" class="location-link">Shop SH13, Menlyn Park Shopping Centre Cnr Atterbury Road &, Lois Ave, Menlyn, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Thursday from 9:00 AM to 9:00 PM, Friday and Saturday from 9:00 AM to 10:00 PM, Sunday from 9:00 AM to 8:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="fun-company-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('fun-company')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+        <!-- Bounce Inc Menlyn Maine -->
+		<div class="activity" data-activity="bounce-inc">
+            <img src="images/bounce_inc.jpg" alt="Bounce Inc Menlyn Maine Image">
+            <div class="activity-info">
+                <h2>Bounce Inc Menlyn Maine</h2>
+                <p><strong>Description:</strong> A trampoline park that’s great for both kids and adults.</p>
+                <p><strong>Price:</strong> Prices vary</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=BOUNCE+Menlyn+Maine,+180+Amarand+Ave,+Waterkloof+Glen,+Pretoria" style="color:black" target="_blank" class="location-link">180 Amarand Ave, Waterkloof Glen, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday to Friday from 12:00 PM to 6:00 PM, Saturday and Sunday from 9:00 AM to 6:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="bounce-inc-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('bounce-inc')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Just Breakout -->
+		<div class="activity" data-activity="just-breakout">
+            <img src="images/just_breakout.jpg" alt="Just Breakout Image">
+            <div class="activity-info">
+                <h2>Just Breakout</h2>
+                <p><strong>Description:</strong> An escape room experience that’s both fun and challenging.</p>
+                <p><strong>Price:</strong> R200 per person</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Just+Breakout,+Office+103,+Java+Centre,+285+Lynnwood+Rd,+Menlo+Park,+Pretoria" style="color:black" target="_blank" class="location-link">Office 103, Java Centre, 285 Lynnwood Rd, Menlo Park, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Monday and Tuesday Closed, Wednesday and Thursday from 12:00 PM to 8:00 PM, Friday and Saturday from 8:30 AM to 8:00 PM, Sunday from 10:15 AM to 8:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="just-breakout-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('just-breakout')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Fountains Valley Resort -->
+		<div class="activity" data-activity="fountains-valley">
+            <img src="images/fountains_valley.jpg" alt="Fountains Valley Resort Image">
+            <div class="activity-info">
+                <h2>Fountains Valley Resort</h2>
+                <p><strong>Description:</strong> Ideal for hiking, nature walks, and picnics.</p>
+                <p><strong>Price:</strong> Entry fees vary; typically around R50 per person.</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Fountains+Valley,+Christian+de+Witt+Ave,+Groenkloof+358-Jr,+Pretoria" style="color:black" target="_blank" class="location-link">Christian de Witt Ave, Groenkloof 358-Jr, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Daily from 6:00 AM to 6:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="fountains-valley-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('fountains-valley')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Wonderboom Nature Reserve -->
+		<div class="activity" data-activity="wonderboom-nature">
+            <img src="images/wonderboom_nature.jpg" alt="Wonderboom Nature Reserve Image">
+            <div class="activity-info">
+                <h2>Wonderboom Nature Reserve</h2>
+                <p><strong>Description:</strong> Known for its ancient fig tree and scenic hiking trails</p>
+                <p><strong>Price:</strong> Adults:R37, Children:R22</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Wonderboom+Nature+Reserve,+1+Lavender+Rd,+Annlin+West,+Pretoria" style="color:black" target="_blank" class="location-link">1 Lavender Rd, Annlin West, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Daily from 7:00 AM to 5:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="wonderboom-nature-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('wonderboom-nature')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+		
+        <!-- Hazel Food Market -->
+		<div class="activity" data-activity="hazel-food">
+            <img src="images/hazel-food.jpg" alt="Hazel Food Market Image">
+            <div class="activity-info">
+                <h2>Hazel Food Market</h2>
+                <p><strong>Description:</strong> An international food market offering a variety of delicious treats.</p>
+                <p><strong>Price:</strong> Free entry</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Hazel+Food+Market.,+378+Queen’s+Crescent,+Lynnwood,+Pretoria" style="color:black" target="_blank" class="location-link">378 Queen’s Crescent, Lynnwood, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Every Saturday from 8:00 AM to 2:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="hazel-food-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('hazel-food')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+<!-- Market @ the Sheds -->
+		<div class="activity" data-activity="sheds-market">
+            <img src="images/sheds-market.jpg" alt="Market @ the Sheds Image">
+            <div class="activity-info">
+                <h2>Market @ the Sheds</h2>
+                <p><strong>Description:</strong> A vibrant social market with local entrepreneurs, food, and live music.</p>
+                <p><strong>Price:</strong> Free entry</p>
+                <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Market@theSheds,+387+Helen+Joseph+Street,+Pretoria" style="color:black" target="_blank" class="location-link">387 Helen Joseph Street, Pretoria</a></p>
+                <p><strong>Trading Hours:</strong> Last Saturday of every month from 11:00 AM to 6:00 PM</p>
+
+                <div class="rating-box">
+                    <header>Average Rating:</header>
+                    <div class="stars average-stars" id="sheds-market-average-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="view-reviews" onclick="handleReviewClick('sheds-market')">Click here to view or submit reviews</div>
+            </div>
+        </div>
+
+        <!-- Reviews Pop-up Template -->
+        <div class="overlay" id="reviews-popup-overlay" onclick="closePopup()"></div>
+        <div class="reviews-popup" id="reviews-popup">
+            <div class="popup-header">
+                <h3>How Was Your Experience?</h3>
+                <div class="stars" id="user-rating">
+                    <i class="fa-solid fa-star" onclick="rate(1)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(2)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(3)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(4)"></i>
+                    <i class="fa-solid fa-star" onclick="rate(5)"></i>
+                </div>
+            </div>
+
+            <!-- Comment Section -->
+            <div class="review-form">
+                <textarea id="user-review" rows="4" placeholder="Write your review here..." aria-label="Write your review"></textarea>
+                <button onclick="submitReview()">Submit</button>
+            </div>
+
+            <!-- Displaying Existing Reviews -->
+            <div class="reviews-section">
+                <h4>Reviews:</h4>
+                <div id="review-list">
+                    <!-- Reviews will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="waves">
+                 <div class="wave" id="wave1"></div>
+                 <div class="wave" id="wave2"></div>
+                 <div class="wave" id="wave3"></div>
+                 <div class="wave" id="wave4"></div>
+            </div>
+
+            <h2></h2>
+
+            <div class="row">
+                <div class="col">
+                    <ul class="social">
+                        <li><i class="fa-brands fa-twitter"></i></li></i>
+                        <li><i class="fa-solid fa-envelope"></i></li>
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-whatsapp"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row-link">
+                <div class="col">
+                    <div class="info">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Skills</a>
+                        <a href="#">Teams</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="copyright">&copy; 2024 GO FINDER. All Rights Reserved. <a href="#" id="tcpp">Terms & Conditions</a> | <a href="#" id="tcpp">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</html>
